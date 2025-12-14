@@ -33,12 +33,12 @@ export function Header({ cart }: HeaderProps) {
         <button className="search-button">
           <img className="search-icon" src="images/icons/search-icon.png" />
         </button>
+          
       </div>
 
       <div className="right-section">
 
         <NavLink className="orders-link header-link" to="/orders">
-
           <span className="orders-text">Orders</span>
         </NavLink>
 

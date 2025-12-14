@@ -103,23 +103,55 @@
   justify-content: end;
 }
 
-.header .orders-link {
+.header .orders-link,
+.header .login-link {
   color: white;
-
   display: flex;
   align-items: center;
+  height: 40px;
   padding-left: 13px;
   padding-right: 13px;
+  transition: background 0.2s, border 0.2s;
+  box-sizing: border-box;
 }
 
-.header .orders-link.active {
+.header .login-link {
+  margin-left: 10px;
+}
+
+.header .orders-link.active,
+.header .login-link.active {
   text-decoration: underline;
 }
 
-.header .orders-text {
+.header .orders-link:hover,
+.header .login-link:hover {
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+}
+
+.header .orders-text,
+.header .login-text {
   display: block;
   font-size: 15px;
   font-weight: 700;
+}
+
+@media (max-width: 675px) {
+  .header .orders-link,
+  .header .login-link {
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 13px;
+    height: 32px;
+  }
+  .header .login-link {
+    margin-left: 5px;
+  }
+  .header .orders-text,
+  .header .login-text {
+    font-size: 13px;
+  }
 }
 
 .header .cart-link {
